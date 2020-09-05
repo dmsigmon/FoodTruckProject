@@ -10,7 +10,7 @@ public class FoodTruckApp {
 
 		Scanner kb = new Scanner(System.in);
 
-		double accumlativeRatings = 0;
+		double cumulativeRatings = 0;
 		double avgRating = 0.0;
 		int highestRating = 0;
 		String bestFoodTruck = "";
@@ -35,9 +35,9 @@ public class FoodTruckApp {
 			System.out.println("What is the rating of the food truck between [1-5]?");
 			foodTruck.setRating(kb.nextInt());
 
-			accumlativeRatings += foodTruck.getRating();
+			cumulativeRatings += foodTruck.getRating();
 
-			avgRating = accumlativeRatings / (i + 1);
+			avgRating = cumulativeRatings / (i + 1);
 
 			foodTruck.setUniqueId(i);
 
