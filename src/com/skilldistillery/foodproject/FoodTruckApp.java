@@ -45,8 +45,6 @@ public class FoodTruckApp {
 			
 			avgRating = cumulativeRatings / (i + 1);
 			
-			foodTruck.setUniqueId(i);
-			
 			fTArr[i] = foodTruck;
 			
 			if (highestRating < foodTruck.getRating()) {

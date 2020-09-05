@@ -2,20 +2,19 @@ package com.skilldistillery.foodproject;
 
 public class FoodTruck {
 
+	private static int nextUniqueId;
 	private int uniqueId;
 	private int rating;
 	private String name;
 	private String foodType;
 
-	public FoodTruck(int rating, String name, String foodType, int uniqueId) {
+	public FoodTruck(int rating, String name, String foodType, int nextUniqueId ) {
 		this.rating = rating;
 		this.name = name;
 		this.foodType = foodType;
-		this.uniqueId = uniqueId;
+		this.uniqueId = nextUniqueId ;
 	}
 	
-	//ASK ABOUT THE UNIQUE ID BEING STATIC AND HOW TO FIX IT!!!!!
-
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -31,12 +30,14 @@ public class FoodTruck {
 		return builder.toString();
 	}
 
-	public int getUniqueId() {
-		return uniqueId;
+
+	public int getnextUniqueId() {
+		return nextUniqueId;
 	}
 
-	public void setUniqueId(int uniqueId) {
-		this.uniqueId = uniqueId;
+
+	public void setnextUniqueId(int uniqueId) {
+		this.nextUniqueId = uniqueId;
 	}
 
 	public int getRating() {
